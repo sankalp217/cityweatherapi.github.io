@@ -14,6 +14,11 @@ function checkweather(e){
     .then(Response => Response.json())
     .then(data =>{
       console.log(data);
+      
+      const temp=(data.currentConditions.conditions);
+      const cel=FarenheightToCelcius(data.currentConditions.conditions);
+      console.log(cel);
+
       output.innerHTML=`
             <div class="cityWeather">
               <h3 class="display-5 fw-normal text-center">Weather</h3>
@@ -29,18 +34,18 @@ function checkweather(e){
                               <p class="card-text mt-3">${data.currentConditions.conditions}</p>
                           </div>
                           <div class="col-sm-6">
-                              <h1 class="display-1">${data.currentConditions.temp}&#8457;</h1>
-                              <p class="card-text lead">${data.days[0].tempmax}&#8457; / ${data.days[0].tempmin}&#8457;</p>
+                              <h1 class="display-1">${FarenheightToCelcius(data.currentConditions.temp)}&#8451;</h1>
+                              <p class="card-text lead">${FarenheightToCelcius(data.days[0].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[0].tempmin)}&#8451;</p>
                           </div>
                           <div class="fw-semibold">
                                 <div class="py-1 d-flex flex-wrap justify-content-around">
-                                    <div class="m-auto mb-1">Pressure: ${data.days[0].pressure}</div>
-                                    <div class="m-auto mb-1">Windspeed: ${data.days[0].windspeed}</div>   
+                                    <div class="m-auto mb-1">Pressure: ${data.days[0].pressure} Pa</div>
+                                    <div class="m-auto mb-1">Windspeed: ${data.days[0].windspeed} km/h</div>   
                                 </div>
     
                                 <div class="py-1 d-flex flex-wrap justify-content-around">
-                                    <div class="m-auto mb-1">Humidity: ${data.days[0].humidity}</div>
-                                    <div class="m-auto mb-1">Visibility: ${data.days[0].visibility}</div>
+                                    <div class="m-auto mb-1">Humidity: ${data.days[0].humidity} gm³</div>
+                                    <div class="m-auto mb-1">Visibility: ${data.days[0].visibility} km</div>
                                 </div>
                             </div>
                      </div>
@@ -62,8 +67,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[1].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[1].conditions}</p>
-                                <h1 class="display-6">${data.days[1].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[1].tempmax}&#8457; / ${data.days[1].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[1].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[1].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[1].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[1].description}</em></p>
                             </div>
                         </div>
@@ -76,8 +81,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[2].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[2].conditions}</p>
-                                <h1 class="display-6">${data.days[2].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[2].tempmax}&#8457; / ${data.days[2].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[2].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[2].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[2].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[2].description}</em></p>
                             </div>
                         </div>
@@ -90,8 +95,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[3].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[3].conditions}</p>
-                                <h1 class="display-6">${data.days[3].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[3].tempmax}&#8457; / ${data.days[3].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[3].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[3].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[3].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[3].description}</em></p>
                             </div>
                         </div>
@@ -104,8 +109,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[4].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[4].conditions}</p>
-                                <h1 class="display-6">${data.days[4].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[4].tempmax}&#8457; / ${data.days[4].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[4].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[4].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[4].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[4].description}</em></p>
                             </div>
                         </div>
@@ -118,8 +123,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[5].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[5].conditions}</p>
-                                <h1 class="display-6">${data.days[5].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[5].tempmax}&#8457; / ${data.days[5].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[5].temp)}&#8457;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[5].tempmax)}&#8457; / ${FarenheightToCelcius(data.days[5].tempmin)}&#8457;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[5].description}</em></p>
                             </div>
                         </div>
@@ -132,8 +137,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[6].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[6].conditions}</p>
-                                <h1 class="display-6">${data.days[6].temp}&#8457;</h1>
-                                <p class="fw-light">${data.days[6].tempmax}&#8457; / ${data.days[6].tempmin}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[6].temp)}&#8457;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[6].tempmax)}&#8457; / ${FarenheightToCelcius(data.days[6].tempmin)}&#8457;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[6].description}</em></p>
                             </div>
                         </div>
@@ -145,3 +150,8 @@ function checkweather(e){
 
     e.preventDefault();
 }
+
+function FarenheightToCelcius(temp){
+    Celci=(temp-32) * 5/9;
+    return Celci.toFixed(1);
+};
