@@ -123,8 +123,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[5].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[5].conditions}</p>
-                                <h1 class="display-6">${FarenheightToCelcius(data.days[5].temp)}&#8457;</h1>
-                                <p class="fw-light">${FarenheightToCelcius(data.days[5].tempmax)}&#8457; / ${FarenheightToCelcius(data.days[5].tempmin)}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[5].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[5].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[5].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[5].description}</em></p>
                             </div>
                         </div>
@@ -137,8 +137,8 @@ function checkweather(e){
                                 <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/${data.days[6].icon}.svg"/>
                                                 
                                 <p class="card-text mt-2">${data.days[6].conditions}</p>
-                                <h1 class="display-6">${FarenheightToCelcius(data.days[6].temp)}&#8457;</h1>
-                                <p class="fw-light">${FarenheightToCelcius(data.days[6].tempmax)}&#8457; / ${FarenheightToCelcius(data.days[6].tempmin)}&#8457;</p>
+                                <h1 class="display-6">${FarenheightToCelcius(data.days[6].temp)}&#8451;</h1>
+                                <p class="fw-light">${FarenheightToCelcius(data.days[6].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[6].tempmin)}&#8451;</p>
                                 <p class="card-text text-center mt-3"><em>${data.days[6].description}</em></p>
                             </div>
                         </div>
