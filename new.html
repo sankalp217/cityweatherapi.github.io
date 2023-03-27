@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/cerulean/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>City Weather api</title>
+</head>
+<body class="mx-2 my-5">
+    <div class="container">
+        <h1>City Weather API</h1>
+        <form>
+            <div class="form-group">
+                <label for="city" class="mb-2">Search city to check weather.</label>
+                <input id="city" class="input form-control" type="text" value="" placeholder="Enter the city name">
+                <button type="submit" id="submitbtn" class="btn btn-primary btn-block mt-3">Check weather</button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <div class="container display">
+
+
+        <!-- <div class="cityWeather">
+            <h3 class="display-5 fw-normal fw text-center">Weather</h3>
+            <div class="card">
+                <div class="card-body flex-wrap mx-4">
+                    <div class="row align-items-center text-center m-auto">
+
+                        <div class="col-sm-5 bg-danger">
+                            <h5 class="display-1">Thane</h5>
+                            <p class="lead">21 november 2022</p>
+       
+                            <img width="15%" height="8%" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                        </div>
+
+                        <div class="col-sm-7 bg-primary">
+                            <h1 class="display-1">81.5&#8457;</h1>
+                            <p class="card-text lead">55&#8457; / 90&#8457;</p>
+                            <div class="fw-semibold bg-secondary d-flex align-items-center justify-content-center">
+                                <div class="py-1 d-flex flex-wrap justify-content-around row">
+                                    <div class="m-2 mb-1 bg-light">Pressure: 1010.3</div>
+                                    <div class="m-2 mb-1 bg-light">Windspeed: 8.7</div>   
+                                </div>
+    
+                                <div class="py-1 d-flex flex-wrap justify-content-around row">
+                                    <div class="m-2 mb-1 bg-light">Humidity: 47</div>
+                                    <div class="m-2 mb-1 bg-light">Visibility: 6.2</div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                   <p class="card-text text-center mt-4"><em>Similar temperatures continuing with no rain expected.</em></p>
+               </div>
+            </div>
+        </div>
+        <div class="WeeklyForecast">
+            <br>
+            <h3 class="display-5 fw text-center">Weekly Forecast</h3>
+        
+            <div class="row">
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2">
+                    <div class="card mb-3">
+                        <div class="card-body text-center">
+                            <p class="">22 november 2022</p>
+                            <img width="80" height="60" src="https://raw.githubusercontent.com/visualcrossing/WeatherIcons/2de560da89d87de44e3ca2a6593a12c19c8346d3/SVG/2nd%20Set%20-%20Color/clear-day.svg"/>
+                                            
+                            <p class="card-text mt-2">clear cloudy</p>
+                            <h1 class="display-6">81&#8457;</h1>
+                            <p class="fw-light">55&#8457; / 90&#8457;</p>
+                            <p class="card-text text-center mt-3"><em>Similar temperatures continuing with no rain expected.</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+    </div>
+        
+
+    <!-- <script src="new.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>
