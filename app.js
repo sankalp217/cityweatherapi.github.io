@@ -34,7 +34,7 @@ function checkweather(e){
                               <p class="card-text mt-3">${data.currentConditions.conditions}</p>
                           </div>
                           <div class="col-sm-6">
-                              <h1 class="display-1">${FarenheightToCelcius(data.currentConditions.temp)}&#8451;</h1>
+                              <h1 class="display-1">${FarenheightToCelcius(data.currentConditions.temp)}<span class="display-5">&#8451;</span></h1>
                               <p class="card-text lead">${FarenheightToCelcius(data.days[0].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[0].tempmin)}&#8451;</p>
                           </div>
                           <div class="fw-semibold">
@@ -49,7 +49,7 @@ function checkweather(e){
                                 </div>
                             </div>
                      </div>
-                     <p class="card-text text-center mt-4"><em>${data.description}</em></p>
+                     <p class="card-text text-center mt-4"><em>"${data.description}"</em></p>
                  </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[1].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[1].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[1].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[1].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[1].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[1].description}"</em></p>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[2].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[2].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[2].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[2].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[2].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[2].description}"</em></p>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[3].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[3].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[3].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[3].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[3].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[3].description}"</em></p>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[4].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[4].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[4].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[4].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[4].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[4].description}"</em></p>
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[5].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[5].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[5].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[5].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[5].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[5].description}"</em></p>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@ function checkweather(e){
                                 <p class="card-text mt-2">${data.days[6].conditions}</p>
                                 <h1 class="display-6">${FarenheightToCelcius(data.days[6].temp)}&#8451;</h1>
                                 <p class="fw-light">${FarenheightToCelcius(data.days[6].tempmax)}&#8451; / ${FarenheightToCelcius(data.days[6].tempmin)}&#8451;</p>
-                                <p class="card-text text-center mt-3"><em>${data.days[6].description}</em></p>
+                                <p class="card-text text-center mt-3"><em>"${data.days[6].description}"</em></p>
                             </div>
                         </div>
                     </div>
